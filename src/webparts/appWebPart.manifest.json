@@ -10,17 +10,17 @@
         {
             "groupId": "5c03119e-3074-46fd-976b-c60198311f70", 
             "group": {
-                "default": "Other"
+                "default": "FRCI"
             },
             "title": {
-                "default": "AngularCLIWebPart"
+                "default": "Trasport"
             },
             "description": {
-                "default": "Sample Angular CLI Webpart"
+                "default": "FRCI transport serivce with ngSPFx"
             },
             "officeFabricIconFontName": "Page",
             "properties": {
-                "description": "Sample SPFx WebPart with Angular CLI"
+                "description": "This is a new transport service by FRCI"
             }
         }
     ]

@@ -46,7 +46,7 @@ export default class NgHelloWorldWebPartWebPart extends BaseClientSideWebPart<Ap
                             groupFields: [
                                 PropertyPaneTextField('description', {
                                     label: 'Description',
-                                    value: 'Sahil'
+                                    value: 'Shailesh S'
                                 })
                             ]
                         }

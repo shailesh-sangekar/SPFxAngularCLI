@@ -1,7 +1,7 @@
 {
   "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "spfx-angularcli-solution",
+    "name": "frci-transport-solution",
     "id": "02f05e59-4350-4638-89a9-727cb81cefc9",
     "version": "1.0.0.0",
     "includeClientSideAssets": true
