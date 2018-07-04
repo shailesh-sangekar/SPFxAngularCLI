@@ -2,15 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ApplicationRef } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { TransportComponent } from './transports/transport.component';
+import { TransportService } from '../services/transport.service';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TransportComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SharedModule.forRoot()
   ],
-  providers: [],
+  providers: [TransportService,],
   entryComponents: [AppComponent]
 })
 export class AppModule {
