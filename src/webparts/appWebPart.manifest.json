@@ -1,0 +1,27 @@
+{
+    "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+    "id": "a884f6f5-e74c-4932-972f-0e1431147413",
+    "alias": "AppWebPart",
+    "componentType": "WebPart",
+    "version": "*",
+    "manifestVersion": 2,
+    "requiresCustomScript": false,
+    "preconfiguredEntries": [
+        {
+            "groupId": "5c03119e-3074-46fd-976b-c60198311f70", 
+            "group": {
+                "default": "FRCI"
+            },
+            "title": {
+                "default": "Trasport"
+            },
+            "description": {
+                "default": "FRCI transport serivce with ngSPFx"
+            },
+            "officeFabricIconFontName": "Page",
+            "properties": {
+                "description": "This is a new transport service by FRCI"
+            }
+        }
+    ]
+}

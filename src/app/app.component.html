@@ -1,0 +1,141 @@
+<!-- <h1>Welcome!</h1> To Muritius goverment services
+<br/>We are here to serve you with best possible solutions for your service related functionlaities.
+<br/>
+<p>{{description}}</p>
+<frci-transport></frci-transport> -->
+
+<div>
+    <h2 style="left: 32%;position:  relative;">Transport Form</h2>
+    <h3 >Applicantion Type</h3>
+    <table >
+            <tr>
+                <td >
+                    <label>Applicant Type<span style="color: red;">*</span> : </label> 
+                    <!-- <input type="text" [(ngModel)]="TransportObj.ApplicantType" /> -->
+                    <select disabled style="width: 150px;" required>
+                            <option value="Registered Companies, Corporate Bodies">Registered Companies, Corporate Bodies</option>                                        
+                            <option value="Individual Applicant">Individual Applicant</option>                        
+                    </select>
+                </td>
+                <td >
+                    <label>Are you filling this form on behalf of someone? : </label>
+                    <!-- <input type="text" [(ngModel)]="TransportObj.OnBehalf"/>  -->
+                    <select disabled>
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                    </select>
+                </td>  
+            </tr>
+    </table>
+    <br/>
+    <h3 >Applicant Information</h3>
+    <table >
+        <tr>
+            <td>
+                <!-- <label>Title<span style="color: red;">*</span> : </label> 
+                <input type="text" [(ngModel)]="TransportObj.Title" style="width: 35px;" /> -->
+                <label>First Name<span style="color: red;">*</span> : </label> 
+                <input type="text" [(ngModel)]="TransportObj.FirstName" style="border-style: none;background: transparent;" disabled/>
+            </td>
+            <td>
+                <label>Middle Name<span style="color: red;">*</span> : </label> 
+                <input type="text" [(ngModel)]="TransportObj.MiddleName" style="border-style: none;background: transparent;" disabled/>
+            </td>
+            <td>
+                <label>Family Name<span style="color: red;">*</span> : </label> 
+                <input type="text" [(ngModel)]="TransportObj.FamilyName" style="border-style: none;background: transparent;" disabled/>
+            </td>
+        </tr>   
+    </table>
+    <br/>
+    <h3>Company Information</h3>
+    <table>     
+        <tr>
+            <td>
+                <label>CompanyName<span style="color: red;">*</span> : </label> 
+                <input type="text" [(ngModel)]="TransportObj.CompanyName" required/>
+            </td>
+            <td>
+                <label>Registered Company Number<span style="color: red;">*</span> : </label> 
+                <input type="text" [(ngModel)]="TransportObj.RegisteredCoNumber" />
+            </td>
+        </tr> 
+    </table>
+
+    <h3>Address</h3>
+    <table >
+        <tr>
+            <td>
+                <label>Address : </label> 
+                <input type="text" [(ngModel)]="TransportObj.Address" />
+            </td>
+            <td>
+                <label>State : </label> 
+                <input type="text" [(ngModel)]="TransportObj.State" />
+            </td>          
+        </tr>
+        <tr>
+            <td>
+                <label>Town/Village : </label> 
+                <input type="text" [(ngModel)]="TransportObj.Town" />
+            </td>
+            <td>
+                <label>City : </label> 
+                <input type="text" [(ngModel)]="TransportObj.City" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>CountryOfResidence : </label> 
+                <input type="text" [(ngModel)]="TransportObj.CountryOfResidence" />
+            </td>
+            <td>
+                <label>PhoneNumber : </label> 
+                <input type="text" [(ngModel)]="TransportObj.PhoneNumber" />
+            </td> 
+        </tr>
+        <tr>
+            <td>
+                <label>MobileNumber : </label> 
+                <input type="text" [(ngModel)]="TransportObj.MobileNumber" />
+            </td>
+            <td></td>
+        </tr>
+    </table>
+    <br/>
+    <h3>Registration Mark</h3>
+    <table >   
+        <tr>
+            <td>
+                <label>Registration Mark Applied For<span style="color: red;">*</span> : </label> 
+                <input type="text" [(ngModel)]="TransportObj.RegistrationMark" />
+            </td> 
+            <td></td>
+        </tr>    
+    </table>
+    <br/>
+    <h3>Registration Mark of Vehicle</h3>
+    <table>
+        <tr>        
+            <td>
+                <label>Insert NYP for vehicle not yet purchased<span style="color: red;">*</span> : </label> 
+                <input type="text" [(ngModel)]="TransportObj.NYP" />
+            </td> 
+            <td>
+                <label>CAPTCHA<span style="color: red;">*</span> : </label> 
+                <input type="text"  />
+            </td>    
+        </tr>
+    </table>
+    <br/>
+    <button class="btn btn-primary" style="text-align: center;position: relative;left: 40%;" (click)="submitTransportData($event)">Save</button>
+    <button class="btn btn-primary" style="text-align: center;position: relative;left: 42%;">Cancel</button>
+</div>
+
+
+
+
+
+
+
+
