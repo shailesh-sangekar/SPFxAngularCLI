@@ -14,6 +14,11 @@ import { AuthInfo } from '../shared/models/authInfo';
 //import { User } from '../../shared/models/loginUser';
 import { CommonService } from '../shared/services/common.service';
 import { AuthTokenService } from '../shared/services/authToken.service';
+import { TransportService } from '../services/transport.service';
+
+import { SpinnerService } from '../shared/spinner/spinner.service';
+import { Config } from '../shared/config/config';
+import { AuthHttp } from '../shared/services/authHttp.service';
 
 import {
   BaseClientSideWebPart,
@@ -78,6 +83,8 @@ styles: [`
 
 export class AppComponent implements OnInit {
   public TransportObj = new TransportModel;
+  public TransportSer;
+
   model: AuthInfo;
   loggedInUser: string;
   loginName: string;
@@ -89,9 +96,13 @@ export class AppComponent implements OnInit {
               , private _authTokenService: AuthTokenService
               , elm: ElementRef
               , private http:Http
+              , private authHttp: AuthHttp
+              , private _spinnerService: SpinnerService
+              , private router: Router            
             ) {
     this.model = new AuthInfo('password', '', '');
-}
+    this.TransportSer = new TransportService(this.http,authHttp,_spinnerService,router,_authTokenService);
+  }
 
 ngOnInit() {
   this.loggedInUser = 'ankit.panchal';
@@ -111,7 +122,7 @@ ngOnInit() {
 getAuthToken() {
   console.log('in getAuthToken');
   this.model.UserName = this.loginName;
-  this.model.Password = 'Espl@123';
+  this.model.Password = '';
   this._commonService.getAuthToken(this.model)
       .subscribe(
           (results: any) => {
@@ -126,10 +137,7 @@ getAuthToken() {
 
   submitTransportData($event: Event) {
       console.log(this.TransportObj);
-
-      if(this.TransportObj.FirstName === ""){
-        
-      }
+      //this.TransportSer.addTransport(this.TransportObj);   
   }
 
 }
